@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PERSONAL PORTFOLIO WEBSITE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/83ef9e8765.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+<header>
+  <nav class="navbar">
+    <img src="assets/logo.jpg" class="logo" alt="Logo">
+
+    <!-- Side Menu -->
+    <ul id="sidemenu">
+      <li style="--i:1"><a href="#home">Home</a></li>
+      <li style="--i:2"><a href="#about">About</a></li>
+      <li style="--i:3"><a href="#services">Services</a></li>
+      <li style="--i:4"><a href="#portfolio">Portfolio</a></li>
+      <li style="--i:5"><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Menu icon -->
+    <i class="fa-solid fa-bars" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"></i>
+  </nav>
+</header>
+
+
+
+
+  <!-- HEADER SECTION -->
+  <section id="header">
+    <div class="left-section">
+      <div class="header-text">
+        <p>UI/UX Designer & Web Developer</p>
+        <h1>Hi, I am <span>Ritya Bhai</span><br>from India</h1>
+      </div>
+    </div>
+    <div class="right-section">
+      <img src="assets/background.jpg" alt="Profile Photo">
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="assets/user.jpg" alt="User Image">
+      </div>
+
+      <div class="about-col-2">
+        <h1>About Me</h1>
+        <p>Hello! I'm Ritya Bhai, a passionate UI/UX Designer and Web Developer based in India. I specialize in creating beautiful and functional websites that provide an exceptional user experience. With a keen eye for design and a strong foundation in web development, I strive to bring ideas to life through innovative solutions.</p>
+
+        <div class="tab-titles">
+          <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-link" onclick="opentab('experience')">Experience</p>
+          <p class="tab-link" onclick="opentab('education')">Education</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX Design</span><br>Designing web and app interfaces</li>
+            <li><span>Web Development</span><br>Building responsive and modern websites</li>
+            <li><span>Mobile App Development</span><br>Creating Android/iOS apps</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2023 - Present</span><br>Freelance Web Developer — Designed modern portfolio websites and dashboards for clients.</li>
+            <li><span>2022 - 2023</span><br>UI/UX Intern — Worked on user flow optimization and prototype creation.</li>
+            <li><span>2021 - 2022</span><br>Junior Designer — Collaborated with teams to build engaging web designs.</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2020 - 2024</span><br>B.Tech in Computer Science — VIT-AP University</li>
+            <li><span>2018 - 2020</span><br>Higher Secondary Education — Science Stream</li>
+            <li><span>2017 - 2018</span><br>Secondary School Certificate — Completed with Distinction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div class="service-item">
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Designs attractive websites, logos, and UI elements with attention to detail.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-crop"></i>
+          <h2>UI/UX Design</h2>
+          <p>Designs clean and modern user interfaces for apps and web platforms.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="service-item">
+          <i class="fa-brands fa-app-store"></i>
+          <h2>App Design</h2>
+          <p>Creates mobile apps including meals, to-do, and exercise tracker apps.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION (MY WORK) -->
+  <section id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work-item">
+          <img src="assets/work-1.png" alt="Project 1">
+          <div class="layer">
+            <h3>Stock Market Analysis</h3>
+            <p>Real-time stock data visualization and prediction model using Python.</p>
+            <!-- <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> -->
+             <a href="https://github.com/Ritesh7365" target="_blank" class="link-button">
+      <i class="fas fa-external-link-alt"></i>
+    </a>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <img src="assets/work-2.png" alt="Project 2">
+          <div class="layer">
+            <h3>Soil Health Monitoring</h3>
+            <p>IoT-based soil sensor system that helps farmers manage crops effectively.</p>
+            <!-- <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> -->
+                 <a href="https://github.com/Ritesh7365" target="_blank" class="link-button">
+      <i class="fas fa-external-link-alt"></i>
+    </a>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <img src="assets/work-3.png" alt="Project 3">
+          <div class="layer">
+            <h3>Flutter Meal App</h3>
+            <p>Mobile app to explore, filter, and favorite meals using Flutter and Dart.</p>
+            <!-- <a href="#"><i class="fa-solid fa-up-right-from-square" ></i></a> -->
+                 <a href="https://github.com/Ritesh7365" target="_blank" class="link-button">
+      <i class="fas fa-external-link-alt"></i>
+    </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn">See More</a>
+    </div>
+  </section>
+  <!-- -----------contact SECTION ----------------- -->
+ <div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-envelope"></i> riteshtech34@gmail.com</p>
+        <p><i class="fa-solid fa-phone-volume"></i> +91 9766564767</p>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/_riteshshinde_7365" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ritesh-shinde-2483292b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Ritesh7365" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <a href="assets/my_cv.pdf" download class="btn btn2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form action="submit-to-google-sheet">
+          
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject" required>
+          <textarea rows="6" placeholder="Message" required></textarea>
+          <button type="submit" class="btn">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright &copy; Ritesh Shinde <i class="fa-solid fa-heart"></i>. All Rights Reserved.</p>
+  </div>
+</div>
+
+
+  <!-- SCRIPT FOR TABS -->
+  <script>
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabContents = document.querySelectorAll(".tab-contents");
+
+    function opentab(tabname) {
+      tabLinks.forEach(link => link.classList.remove("active-link"));
+      tabContents.forEach(content => content.classList.remove("active-tab"));
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+<script>
+  const sidemenu = document.getElementById("sidemenu");
+  const menuToggle = document.getElementById("menu-toggle");
+
+  function setMenuState(isOpen) {
+    if (window.innerWidth > 900) {
+      sidemenu.classList.remove("open");
+      sidemenu.removeAttribute("aria-hidden");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.classList.add("fa-bars");
+      menuToggle.classList.remove("fa-xmark");
+      return;
+    }
+
+    sidemenu.classList.toggle("open", isOpen);
+    sidemenu.setAttribute("aria-hidden", (!isOpen).toString());
+    menuToggle.setAttribute("aria-expanded", isOpen.toString());
+    menuToggle.classList.toggle("fa-bars", !isOpen);
+    menuToggle.classList.toggle("fa-xmark", isOpen);
+  }
+
+  function toggleMenu() {
+    if (window.innerWidth > 900) {
+      return;
+    }
+    const isOpen = sidemenu.classList.contains("open");
+    setMenuState(!isOpen);
+  }
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", toggleMenu);
+  }
+
+  sidemenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 900) {
+        setMenuState(false);
+      }
+    });
+  });
+
+  window.addEventListener("resize", () => setMenuState(false));
+  setMenuState(false);
+</script>
+<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyIGWiLvXrlF_h_FRCFGInq5s61HsixfzgKfXl-wc5GOF-aMpkXtwvpW036eBx35sYq/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
