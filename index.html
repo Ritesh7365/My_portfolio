@@ -4,277 +4,346 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERSONAL PORTFOLIO WEBSITE</title>
+  <title>Ritesh Shinde | Flutter & Web Developer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/83ef9e8765.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <!-- NAVIGATION BAR -->
-<header>
-  <nav class="navbar">
-    <img src="assets/logo.jpg" class="logo" alt="Logo">
+  <!-- Parallax background -->
+  <div class="parallax-bg" aria-hidden="true"></div>
 
-    <!-- Side Menu -->
-    <ul id="sidemenu">
-      <li style="--i:1"><a href="#home">Home</a></li>
-      <li style="--i:2"><a href="#about">About</a></li>
-      <li style="--i:3"><a href="#services">Services</a></li>
-      <li style="--i:4"><a href="#portfolio">Portfolio</a></li>
-      <li style="--i:5"><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar glass">
+      <a href="#home" class="logo-wrap">
+        <img src="assets/logo.jpg" class="logo" alt="Ritesh Shinde">
+      </a>
+      <ul id="sidemenu" class="nav-links" role="navigation" aria-label="Main">
+        <li style="--i:1"><a href="#home">Home</a></li>
+        <li style="--i:2"><a href="#about">About</a></li>
+        <li style="--i:3"><a href="#services">Services</a></li>
+        <li style="--i:4"><a href="#portfolio">Projects</a></li>
+        <li style="--i:5"><a href="#contact">Contact</a></li>
+      </ul>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
 
-    <!-- Menu icon -->
-    <i class="fa-solid fa-bars" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"></i>
-  </nav>
-</header>
-
-
-
-
-  <!-- HEADER SECTION -->
-  <section id="header">
-    <div class="left-section">
-      <div class="header-text">
-        <p>UI/UX Designer & Web Developer</p>
-        <h1>Hi, I am <span>Ritesh Shinde</span><br>from India</h1>
-      </div>
-    </div>
-    <div class="right-section">
-      <img src="assets/background.jpg" alt="Profile Photo">
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <div class="row">
-      <div class="about-col-1">
-        <img src="assets/user.jpg" alt="User Image">
-      </div>
-
-      <div class="about-col-2">
-        <h1>About Me</h1>
-        <p>Hello! I'm Ritesh Shinde, a passionate UI/UX Designer and Web Developer based in India. I specialize in creating beautiful and functional websites that provide an exceptional user experience. With a keen eye for design and a strong foundation in web development, I strive to bring ideas to life through innovative solutions.</p>
-
-        <div class="tab-titles">
-          <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
-          <p class="tab-link" onclick="opentab('experience')">Experience</p>
-          <p class="tab-link" onclick="opentab('education')">Education</p>
-        </div>
-
-        <div class="tab-contents active-tab" id="skills">
-          <ul>
-            <li><span>UI/UX Design</span><br>Designing web and app interfaces</li>
-            <li><span>Web Development</span><br>Building responsive and modern websites</li>
-            <li><span>Mobile App Development</span><br>Creating Android/iOS apps</li>
-          </ul>
-        </div>
-
-        <div class="tab-contents" id="experience">
-          <ul>
-            <li><span>2025 - Present</span><br>Freelance Web Developer — Designed modern portfolio websites and dashboards for clients.</li>
-            <li><span>2023 - 2024</span><br>UI/UX Intern — Worked on user flow optimization and prototype creation.</li>
-            <li><span>2023 - 2024</span><br>Junior Designer — Collaborated with teams to build engaging web designs.</li>
-          </ul>
-        </div>
-
-        <div class="tab-contents" id="education">
-          <ul>
-            <li><span>2023 - 2027</span><br>Currently pursuing B.Tech in Computer Science — VIT-AP University</li>
-            <li><span>2021- 2023</span><br>Higher Secondary Education — Science Stream</li>
-            <li><span>2010 - 2021</span><br>Secondary School Certificate — Completed with Distinction</li>
-          </ul>
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="hero-content reveal">
+        <p class="hero-subtitle">UI/UX Designer & Web Developer</p>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Ritesh Shinde</span><br>
+          <span class="typing-wrap">from India — <span id="typing-role" class="typing-text" aria-live="polite"></span><span class="cursor">|</span></span>
+        </h1>
+        <p class="hero-desc">Crafting clean interfaces and robust apps with Flutter, HTML, CSS, JS, AI, and IoT.</p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section id="services">
-    <div class="container">
-      <h1 class="sub-title">My Services</h1>
-      <div class="services-list">
-        <div class="service-item">
-          <i class="fa-solid fa-code"></i>
-          <h2>Web Design</h2>
-          <p>Designs attractive websites, logos, and UI elements with attention to detail.</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div class="service-item">
-          <i class="fa-solid fa-crop"></i>
-          <h2>UI/UX Design</h2>
-          <p>Designs clean and modern user interfaces for apps and web platforms.</p>
-          <a href="#">Learn more</a>
-        </div>
-        <div class="service-item">
-          <i class="fa-brands fa-app-store"></i>
-          <h2>App Design</h2>
-          <p>Creates mobile apps including meals, to-do, and exercise tracker apps.</p>
-          <a href="#">Learn more</a>
+      <div class="hero-visual reveal">
+        <div class="hero-image-wrap glass">
+          <img src="assets/background.jpg" alt="Ritesh Shinde" loading="eager">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PORTFOLIO SECTION (MY WORK) -->
-  <section id="portfolio">
-    <div class="container">
-      <h1 class="sub-title">My Work</h1>
-      <div class="work-list">
-        <div class="work-item">
-          <img src="assets/work-1.png" alt="Project 1">
-          <div class="layer">
-            <h3>Stock Market Analysis</h3>
-            <p>Real-time stock data visualization and prediction model using Python.</p>
-            <!-- <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> -->
-             <a href="https://github.com/Ritesh7365" target="_blank" class="link-button">
-      <i class="fas fa-external-link-alt"></i>
-    </a>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <div class="about-image-wrap glass">
+              <img src="assets/user.jpg" alt="Ritesh Shinde">
+            </div>
           </div>
-        </div>
-
-        <div class="work-item">
-          <img src="assets/work-2.png" alt="Project 2">
-          <div class="layer">
-            <h3>Soil Health Monitoring</h3>
-            <p>IoT-based soil sensor system that helps farmers manage crops effectively.</p>
-            <!-- <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> -->
-                 <a href="https://github.com/Ritesh7365" target="_blank" class="link-button">
-      <i class="fas fa-external-link-alt"></i>
-    </a>
-          </div>
-        </div>
-
-        <div class="work-item">
-          <img src="assets/work-3.png" alt="Project 3">
-          <div class="layer">
-            <h3>Flutter Meal App</h3>
-            <p>Mobile app to explore, filter, and favorite meals using Flutter and Dart.</p>
-            <!-- <a href="#"><i class="fa-solid fa-up-right-from-square" ></i></a> -->
-                 <a href="https://github.com/Ritesh7365" target="_blank" class="link-button">
-      <i class="fas fa-external-link-alt"></i>
-    </a>
+          <div class="about-content">
+            <p class="about-text reveal">Hello! I'm Ritesh Shinde, a passionate UI/UX Designer and Web Developer based in India. I specialize in creating beautiful and functional websites and apps that provide an exceptional user experience. With a keen eye for design and a strong foundation in web and mobile development, I strive to bring ideas to life through innovative solutions.</p>
+            <div class="tab-titles reveal">
+              <button type="button" class="tab-link active-link" data-tab="skills" aria-selected="true">Skills</button>
+              <button type="button" class="tab-link" data-tab="experience" aria-selected="false">Experience</button>
+              <button type="button" class="tab-link" data-tab="education" aria-selected="false">Education</button>
+            </div>
+            <div class="tab-contents">
+              <div class="tab-panel active-tab reveal" id="skills" role="tabpanel">
+                <ul>
+                  <li><span>UI/UX Design</span> — Designing web and app interfaces</li>
+                  <li><span>Web Development</span> — Building responsive and modern websites</li>
+                  <li><span>Mobile App Development</span> — Creating Android/iOS apps with Flutter</li>
+                </ul>
+              </div>
+              <div class="tab-panel reveal" id="experience" role="tabpanel" hidden>
+                <ul>
+                  <li><span>2025 – Present</span> — Freelance Web Developer — Modern portfolio websites and dashboards.</li>
+                  <li><span>2023 – 2024</span> — UI/UX Intern — User flow optimization and prototype creation.</li>
+                  <li><span>2023 – 2024</span> — Junior Designer — Engaging web designs with teams.</li>
+                </ul>
+              </div>
+              <div class="tab-panel reveal" id="education" role="tabpanel" hidden>
+                <ul>
+                  <li><span>2023 – 2027</span> — B.Tech Computer Science — VIT-AP University</li>
+                  <li><span>2021 – 2023</span> — Higher Secondary — Science Stream</li>
+                  <li><span>2010 – 2021</span> — Secondary School — Completed with Distinction</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <a href="#" class="btn">See More</a>
-    </div>
-  </section>
-  <!-- -----------contact SECTION ----------------- -->
- <div id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p><i class="fa-solid fa-envelope"></i> riteshtech34@gmail.com</p>
-        <p><i class="fa-solid fa-phone-volume"></i> +91 9766564767</p>
+    </section>
 
-        <div class="social-icons">
-          <a href="https://www.instagram.com/_riteshshinde_7365" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/ritesh-shinde-2483292b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/Ritesh7365" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
+    <!-- EXPERIENCE / INTERNSHIPS SECTION -->
+    <section id="internships" class="section experience">
+      <div class="container">
+        <h2 class="section-title reveal">Internships / Experience</h2>
+        <div class="experience-grid">
+          <!-- Java Developer Intern -->
+          <article class="exp-card reveal">
+            <div class="exp-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="exp-card-inner glass">
+              <div class="exp-meta">
+                <span class="exp-role">Java Developer Intern</span>
+                <span class="exp-company">@ Codveda Technologies, Pune</span>
+                <span class="exp-duration">May 2025 – July 2025</span>
+              </div>
+              <div class="exp-description">
+                <ul>
+                  <li>Developed a console-based chat system using Java Sockets and multithreading for real-time multi-user communication.</li>
+                  <li>Implemented server–client architecture for concurrent connections, message broadcasting, and efficient thread management.</li>
+                </ul>
+              </div>
+              <div class="exp-tech">
+                <span class="exp-tech-badge">Java</span>
+                <span class="exp-tech-badge">Socket Programming</span>
+                <span class="exp-tech-badge">Multithreading</span>
+                <span class="exp-tech-badge">Networking</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Full Stack Developer Intern -->
+          <article class="exp-card reveal">
+            <div class="exp-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="exp-card-inner glass">
+              <div class="exp-meta">
+                <span class="exp-role">Full Stack Developer Intern</span>
+                <span class="exp-company">@ Innovative Technologies, Nashik</span>
+                <span class="exp-duration">2 Months</span>
+              </div>
+              <div class="exp-description">
+                <ul>
+                  <li>Developed an invoice generator and management system for an IT company to streamline billing workflows.</li>
+                  <li>Built features for invoice creation, secure data storage, and managing financial records shared with Chartered Accountants.</li>
+                </ul>
+              </div>
+              <div class="exp-tech">
+                <span class="exp-tech-badge">Full Stack Development</span>
+                <span class="exp-tech-badge">JavaScript</span>
+                <span class="exp-tech-badge">Database</span>
+                <span class="exp-tech-badge">Web Development</span>
+              </div>
+            </div>
+          </article>
         </div>
-
-        <a href="assets/my_cv.pdf" download class="btn btn2">Download CV</a>
       </div>
+    </section>
 
-      <div class="contact-right">
-        <form action="submit-to-google-sheet">
-          
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Subject" required>
-          <textarea rows="6" placeholder="Message" required></textarea>
-          <button type="submit" class="btn">submit</button>
-        </form>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2 class="section-title reveal">My Services</h2>
+        <div class="services-grid">
+          <article class="service-card glass reveal">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <h3>Web Design</h3>
+            <p>Attractive websites, logos, and UI elements with attention to detail.</p>
+            <a href="#contact" class="service-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card glass reveal">
+            <i class="fa-solid fa-crop" aria-hidden="true"></i>
+            <h3>UI/UX Design</h3>
+            <p>Clean and modern user interfaces for apps and web platforms.</p>
+            <a href="#contact" class="service-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card glass reveal">
+            <i class="fa-brands fa-app-store" aria-hidden="true"></i>
+            <h3>App Design</h3>
+            <p>Mobile apps including meals, to-do, and exercise tracker apps.</p>
+            <a href="#contact" class="service-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="copyright">
-    <p>Copyright &copy; Ritesh Shinde <i class="fa-solid fa-heart"></i>. All Rights Reserved.</p>
-  </div>
-</div>
+    <!-- PROJECTS SECTION -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h2 class="section-title reveal">My Work</h2>
+        <div class="projects-grid">
+          <!-- Invoice Generator & Management System -->
+          <article class="project-card glass reveal">
+            <div class="project-image">
+              <img src="assets/work-1.png" alt="Invoice Generator and Management System">
+              <div class="project-overlay">
+                <span class="project-badge">Full‑Stack • Production</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Invoice Generator & Management System</h3>
+              <p>Role-based GST-compliant invoice system with payment tracking, reporting, and PDF/Excel exports.</p>
+              <div class="project-tech">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">GST</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Ritesh7365/Invoice-Generator-and-Management-System-" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://invoice-generator-and-management-sy.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
 
+          <!-- RAG Study Assistant -->
+          <article class="project-card glass reveal">
+            <div class="project-image">
+              <img src="assets/work-2.png" alt="RAG Study Assistant">
+              <div class="project-overlay">
+                <span class="project-badge">AI • RAG</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>RAG Study Assistant</h3>
+              <p>AI-powered study assistant using Retrieval-Augmented Generation to chat over PDFs and generate exams.</p>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">FAISS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Ritesh7365/rag-auth-app" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/Ritesh7365/rag-auth-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
 
-  <!-- SCRIPT FOR TABS -->
-  <script>
-    const tabLinks = document.querySelectorAll(".tab-link");
-    const tabContents = document.querySelectorAll(".tab-contents");
+          <!-- Flutter Meals App -->
+          <article class="project-card glass reveal">
+            <div class="project-image">
+              <img src="assets/work-3.png" alt="Flutter Meals App">
+              <div class="project-overlay">
+                <span class="project-badge">Flutter • Mobile</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Meals App</h3>
+              <p>Cross‑platform Flutter app to explore, filter, and favorite meals with category-based navigation.</p>
+              <div class="project-tech">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Dart</span>
+                <span class="tech-badge">Android</span>
+                <span class="tech-badge">iOS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Ritesh7365/MealsApp" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/Ritesh7365/MealsApp" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
 
-    function opentab(tabname) {
-      tabLinks.forEach(link => link.classList.remove("active-link"));
-      tabContents.forEach(content => content.classList.remove("active-tab"));
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-  </script>
-<script>
-  const sidemenu = document.getElementById("sidemenu");
-  const menuToggle = document.getElementById("menu-toggle");
+          <!-- Gemini Clone -->
+          <article class="project-card glass reveal">
+            <div class="project-image">
+              <img src="assets/gemini-clone.png" alt="Gemini Clone UI">
+              <div class="project-overlay">
+                <span class="project-badge">AI • Chatbot</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Gemini Clone</h3>
+              <p>Lightweight Gemini-powered chat experience built with React and clean, modern UI.</p>
+              <div class="project-tech">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Gemini API</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">CSS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Ritesh7365/GEMINI-CLONE" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://geminiclone-ten.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="portfolio-cta reveal">
+          <a href="https://github.com/Ritesh7365" target="_blank" rel="noopener noreferrer" class="btn btn-outline">See More on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-  function setMenuState(isOpen) {
-    if (window.innerWidth > 900) {
-      sidemenu.classList.remove("open");
-      sidemenu.removeAttribute("aria-hidden");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.classList.add("fa-bars");
-      menuToggle.classList.remove("fa-xmark");
-      return;
-    }
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal">Contact Me</h2>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> riteshtech34@gmail.com</p>
+            <p><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> +91 9766564767</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/_riteshshinde_7365" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ritesh-shinde-2483292b8" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Ritesh7365" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <a href="assets/my_cv.pdf" download class="btn btn-primary">Download CV</a>
+          </div>
+          <div class="contact-form-wrap glass reveal">
+            <form name="submit-to-google-sheet" id="contact-form" class="contact-form">
+              <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+              <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
+              <input type="text" name="subject" placeholder="Subject" required aria-label="Subject">
+              <textarea name="message" rows="5" placeholder="Message" required aria-label="Message"></textarea>
+              <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    sidemenu.classList.toggle("open", isOpen);
-    sidemenu.setAttribute("aria-hidden", (!isOpen).toString());
-    menuToggle.setAttribute("aria-expanded", isOpen.toString());
-    menuToggle.classList.toggle("fa-bars", !isOpen);
-    menuToggle.classList.toggle("fa-xmark", isOpen);
-  }
+  <footer class="footer">
+    <p>© <span id="year"></span> Ritesh Shinde <i class="fa-solid fa-heart" aria-hidden="true"></i> All rights reserved.</p>
+  </footer>
 
-  function toggleMenu() {
-    if (window.innerWidth > 900) {
-      return;
-    }
-    const isOpen = sidemenu.classList.contains("open");
-    setMenuState(!isOpen);
-  }
-
-  if (menuToggle) {
-    menuToggle.addEventListener("click", toggleMenu);
-  }
-
-  sidemenu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 900) {
-        setMenuState(false);
-      }
-    });
-  });
-
-  window.addEventListener("resize", () => setMenuState(false));
-  setMenuState(false);
-</script>
-<form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Send</button>
-</form>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyIGWiLvXrlF_h_FRCFGInq5s61HsixfzgKfXl-wc5GOF-aMpkXtwvpW036eBx35sYq/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
